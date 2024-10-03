@@ -220,7 +220,7 @@ class Responses(Credentials):
             'startDate',
             'endDate',
             'timeZone',
-            'breakoutSets'
+            'breakoutSets',
             'sortByLastModifiedDate',
             'filterId',
             'embeddedDataIds',
@@ -229,7 +229,7 @@ class Responses(Credentials):
         ]
 
         for key in list(kwargs.keys()):
-            assert key in valid_keys, "Hey there! You can only pass in parameters with names in the list, ['useLabels', 'includeLabelColumns', 'exportResponsesInProgress', 'limit', 'seenUnansweredRecode', 'multiselectSeenUnansweredRecode', 'includeDisplayOrder', 'startDate', 'endDate', 'timeZone']"
+            assert key in valid_keys, f"Hey there! You can only pass in parameters with names in the list, [{', ', valid_keys}]"
             if key == 'useLabels':
                 assert 'includeLabelColumns' not in list(kwargs.keys(
                 )), 'Hey there, you cannot pass both the "includeLabelColumns" and the "useLabels" parameters at the same time. Please pass just one and try again.'
